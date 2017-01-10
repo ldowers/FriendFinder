@@ -17,13 +17,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Router
+// Routes
 // =============================================================
 require("./app/routing/api-routes.js")(app);
 require("./app/routing/html-routes.js")(app);
 
 // Listener
-// ==============================================================================
+// =============================================================
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
